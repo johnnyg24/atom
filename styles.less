@@ -1,0 +1,132 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  // border-color: red;
+}
+
+//////////////////////////////
+//print style overrides
+//////////////////////////////
+atom-text-editor-minimap.print-code {
+  display: none;
+}
+
+html.print-code,
+body.print-code,
+atom-pane-container atom-pane.print-code {
+  overflow: visible !important;
+  width: 210mm !important;
+}
+
+@media print {
+  .line-number, .line{
+    //font-size: 10pt;
+    //line-height: 8.5pt;
+  }
+  // .gutter div, .lines div{
+  //   contain: layout style;
+  //   position: relative !important;
+  //   height: auto !important;
+  //   width: auto !important;
+  //   transform: none !important;
+  //   display: block;
+  // }
+  atom-text-editor .indent-guide{
+    color: #cccccc;
+  }
+  .gutter.line-numbers{
+    width: 10mm !important;
+  }
+
+  .tree-view{
+    display: hidden;
+  }
+  .footer{
+    display: none;
+  }
+  .tab-bar{
+    display: none;
+  }
+  .atom-dock-mask{
+    display: none
+  }
+  .editor atom-text-editor-minimap{
+    display: none;
+  }
+}
+
+
+// .line-number, .line{
+//   font-size: 7pt;
+//   line-height: 7pt;
+// }
+// .gutter div, .lines div{
+//   height: auto;
+// }
+
+//////////////////////////////
+//atom style overrides
+//////////////////////////////
+atom-pane ul.tab-bar, .panel-footer, .tree-view{
+  //background-color: #333333;
+  //border-bottom: 2px solid #727984;
+}
+html.print-code {
+
+
+}
+
+
+
+
+.status-bar{
+  border-top: 2px solid #727984;
+}
+
+.tree-view{
+  border-right: 2px solid #727984;
+}
+
+.minimap-controls{
+  border-left: 2px solid #727984;
+}
+
+atom-pane ul.tab-bar {
+  border-bottom: 2px solid #727984;
+}
+
+
+//////////////////////////////
+//jBase style overrides
+//////////////////////////////
+.syntax--number.syntax--jbase{
+  color: #2E9AFE;
+}
+
+.syntax--attribute.syntax--jbase{
+  color: #F3F781;
+}
+
+.syntax--attributemark.syntax--jbase{
+  color: #F79F81;
+}
+
+.syntax--comment.syntax--jbase{
+  color: #727984;
+}
+
+////uncomment to make all jbase text white.
+// .syntax--jbase{
+//   color: #ffffff
+// }
